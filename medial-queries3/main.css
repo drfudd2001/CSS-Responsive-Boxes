@@ -1,3 +1,93 @@
 body {
+  text-align: center;
+  font-size: 4rem;
   background: peachpuff;
+}
+
+* {
+  border: 1px solid black;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  row-gap: 2rem;
+}
+
+.a {
+  width: 100vw;
+  height: 20vw;
+  background: #432371;
+}
+
+.b {
+  width: 100vw;
+  height: 40vh;
+  background: #714674;
+}
+
+.c {
+  background: #9F6976;
+}
+
+.d {
+  background: #ab7277;
+}
+
+.e {
+  background: #b67a78;
+}
+
+.f {
+  background: #c18379;
+}
+
+.g {
+  background: #cc8b79;
+}
+
+.b, .c, .d, .e, .f, .g{
+  height: 25vw;
+  width: 25vw;
+}
+
+.h {
+  width: 100vw;
+  height: 40vh;
+  background: #E39D7A;
+}
+
+@media screen and (min-width: 600px){
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .a, .b, .c, .d, .e, .f, .g, .h {
+    width: auto;
+    height: auto;
+  }
+  .a {
+    grid-column: 1/5;
+    grid-row: 1;
+    height: 20vh;
+  }
+  .b, .c, .d {
+    grid-row: 2;
+    height: 30vh;
+    width: 20vw;
+  }
+  .e, .f, .g{
+    grid-row: 3;
+    height: 30vh;
+    width: 20vw;
+  }
+  .h {
+    grid-column: 4;
+    grid-row: 2/4;
+    width: 30vw;
+  }
 }
